@@ -9,7 +9,8 @@ import MenuIcon from "@material-ui/icons/Menu"
 const useStyles = makeStyles({
     list: {
       width: 250,
-      paddingTop : 44
+      paddingTop : 44,
+      backgroundColor : "red"
     },
     fullList: {
       width: 'auto',
