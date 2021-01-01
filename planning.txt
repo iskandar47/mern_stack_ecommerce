@@ -1,0 +1,13 @@
+A - Client side : 
+  1- Theme ( colors and fonts )
+  2- Home page 
+  3- Sing up and Sign in pages
+  4- All products page 
+  5- Single product page 
+  6- Dashbord ( a- products, b- orders, c- users )
+
+B - Server side :
+  1- Database design 
+  2- Authentication
+  3- Products requests
+  4- Orders requests 
