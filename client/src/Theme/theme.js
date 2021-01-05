@@ -2,14 +2,12 @@ import { createMuiTheme, responsiveFontSizes } from "@material-ui/core"
 import typography from "./typography"
 import palette from "./palette"
 import overrides from "./overrides"
-import i18n from "../i18n/i18n"
 
 const options = {
     direction : "ltr", 
     typography,
     palette,
     overrides,
-    /* shadows : ["none"], */
     breakpoints: {
         values: {
           xs: 0,

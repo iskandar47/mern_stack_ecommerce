@@ -10,7 +10,8 @@ const useStyles = makeStyles({
     list: {
       width: 250,
       paddingTop : 44,
-      backgroundColor : "red"
+      backgroundColor : "#FFF",
+      height : "100%"
     },
     fullList: {
       width: 'auto',
@@ -59,7 +60,7 @@ const useStyles = makeStyles({
     );
   
     return (
-      <div>
+      <div >
             <MenuIcon 
             fontSize="large" 
             className={classes.menuIcon}

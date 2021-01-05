@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import { CssBaseline,  Box, Typography, Button } from "@material-ui/core"
+import { CssBaseline } from "@material-ui/core"
 import { ThemeProvider, jssPreset, StylesProvider } from "@material-ui/styles"
 import { customTheme } from "./Theme/theme"
 import rtl from "jss-rtl"

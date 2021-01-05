@@ -5,7 +5,6 @@ import { Link } from "react-router-dom"
 import i18n from "../../../i18n/i18n"
 import eShop from "../../../assets/e.svg"
 import { makeStyles, AppBar, Toolbar, Button, IconButton, Typography, Container, Hidden } from '@material-ui/core';
-import MenuIcon from "@material-ui/icons/Menu"
 import LanguageIcon from '@material-ui/icons/Language';
 import TemporaryDrawer from "./Drawer"
 
@@ -13,10 +12,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     "& .MuiToolbar-gutters" : {padding : 0}
-  },
-  logo: {
-    /* marginRight: theme.spacing(2),
-    marginLeft: theme.spacing(2), */
   },
   links: {
     flexGrow: 1,
@@ -39,14 +34,7 @@ export default function Header() {
 
   const classes = useStyles();
   const {t} = useTranslation()
-  const {dirSettings : {setDir}} = useContext(Context)
-  const [language, setLanguage] = useState("ar")
-
-  const switchLang = (lang) => {
-      setLanguage(prev => prev === "en" ? "ar" : "en")
-      i18n.changeLanguage(lang)
-      setDir(i18n.dir())
-  }
+  const {dirSettings : { language, switchLang}} = useContext(Context)
   
 
   return (
@@ -59,7 +47,7 @@ export default function Header() {
               <img src={eShop} alt="logo" width="40px" />
             </IconButton>
             
-            <Typography variant="body1" color="primary" className={classes.links}>
+            <Typography variant="h6" color="primary" className={classes.links}>
               <Hidden smDown>
                 <Link to="/">{t("Home")}</Link> 
                 <Link to="/products">{t("Products")}</Link>

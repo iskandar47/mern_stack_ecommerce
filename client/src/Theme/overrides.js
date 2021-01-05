@@ -1,4 +1,5 @@
 export default {
+ 
   
     MuiListItemIcon: {
       root: {
@@ -20,4 +21,11 @@ export default {
         },
       },
     },
-  }
+    MuiCssBaseline: {
+      '@global': {
+        html: {
+          scrollBehavior: 'smooth',
+        },
+      },
+    },
+}
