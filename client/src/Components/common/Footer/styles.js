@@ -1,13 +1,23 @@
 import { makeStyles } from "@material-ui/core"
 
-export const useStyles = makeStyles({
+export const useStyles = makeStyles((theme) => ({
     footer : {
-        marginTop : 200,
         backgroundColor : "#FAFAFA",
         display : "flex",
         padding : "32px 0px",
         "& h4" : {
             paddingBottom : 16
+        },
+        [theme.breakpoints.down("sm")] : {
+            "& h4" : {
+                fontSize : 16
+            },
+            "& h6" : {
+                fontSize : 12
+            },
+            "& h5" : {
+                fontSize : 14
+            }
         }
     },
     footerIcons : {
@@ -37,4 +47,4 @@ export const useStyles = makeStyles({
             margin : "0px 4px"
         }
     }
-})
+}))

@@ -1,11 +1,14 @@
 import { red } from "@material-ui/core/colors"
 export default {
     primary : {
-        main : "#333"
+        main : "#388E8F"
     },
     secondary : {
-        /* main : "#FDA50F" */
-        main : "#32289B"
+        main : "#053B4B"
+    },
+    text : {
+        primary : "#444",
+        secondary : "#000"
     },
     error : {
         main : red.A400

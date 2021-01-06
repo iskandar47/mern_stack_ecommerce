@@ -1,10 +1,9 @@
-import React, {useState, useContext} from 'react';
+import React, { useContext} from 'react';
 import { useTranslation } from "react-i18next"
 import { Context } from "../../../Context/contextSettings"
-import { Link } from "react-router-dom"
-import i18n from "../../../i18n/i18n"
+import { Link, useHistory } from "react-router-dom"
 import eShop from "../../../assets/e.svg"
-import { makeStyles, AppBar, Toolbar, Button, IconButton, Typography, Container, Hidden } from '@material-ui/core';
+import { makeStyles, AppBar, Toolbar, Button, IconButton, Typography, Container, Hidden, Box } from '@material-ui/core';
 import LanguageIcon from '@material-ui/icons/Language';
 import TemporaryDrawer from "./Drawer"
 
@@ -18,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     margin : "0px 16px",
     "& a" : {
       textDecoration : "none",
-      color : "#333",
+      color : "#053B4B",
       margin : "0px 8px"
     }
   },
@@ -32,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header() {
 
+  const history = useHistory()
   const classes = useStyles();
   const {t} = useTranslation()
   const {dirSettings : { language, switchLang}} = useContext(Context)
@@ -47,7 +47,7 @@ export default function Header() {
               <img src={eShop} alt="logo" width="40px" />
             </IconButton>
             
-            <Typography variant="h6" color="primary" className={classes.links}>
+            <Typography variant="h6" className={classes.links}>
               <Hidden smDown>
                 <Link to="/">{t("Home")}</Link> 
                 <Link to="/products">{t("Products")}</Link>
@@ -62,10 +62,16 @@ export default function Header() {
             </Button>
 
             <Hidden smDown>
-              <Button color="secondary" variant="outlined">Login</Button>
+              <Button color="primary" variant="outlined" onClick={()=> history.push("/login")}>
+                Login
+              </Button>
+              <Box pl={1} pr={1}></Box>
+              <Button color="secondary" variant="contained" onClick={()=> history.push("/register")}>
+                Register
+              </Button>
             </Hidden>
-
             <Hidden mdUp>  
+            
               <TemporaryDrawer/>
             </Hidden>
 

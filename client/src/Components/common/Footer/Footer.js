@@ -18,14 +18,14 @@ function Footer() {
         <Container maxWidth={false} className={classes.footer}>
             <Container maxWidth="xl">
                 <Grid container>
-                    <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
-                        <Typography variant="h4" color="secondary">Shop</Typography>
+                    <Grid item xs={2} sm={2} md={3} lg={3} xl={3}>
+                        <Typography variant="h4" color="primary">Shop</Typography>
                         <Typography variant="h6">Men</Typography>
                         <Typography variant="h6">Women</Typography>
                         <Typography variant="h6">Kids</Typography>
                     </Grid>
                     <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
-                        <Typography variant="h4" color="secondary">Accessoire</Typography>
+                        <Typography variant="h4" color="primary">Accessoire</Typography>
                         <Typography variant="h6">Bags</Typography>
                         <Typography variant="h6">Phone cases</Typography>
                         <Typography variant="h6">Watchs</Typography>
@@ -33,13 +33,13 @@ function Footer() {
                         <Typography variant="h6">Parfum</Typography>
                     </Grid>
                     <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
-                        <Typography variant="h4" color="secondary">Support</Typography>
+                        <Typography variant="h4" color="primary">Support</Typography>
                         <Typography variant="h6">Customer service</Typography>
                         <Typography variant="h6">Order status</Typography>
                         <Typography variant="h6">Store location</Typography>
                     </Grid>
                     <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
-                        <Typography variant="h4" color="secondary">Contact</Typography>
+                        <Typography variant="h4" color="primary">Contact</Typography>
                         <Typography variant="h5">Email :</Typography>
                         <Typography variant="h6">email@gmail.com</Typography>
                         <Typography variant="h5">Phone :</Typography>
@@ -50,14 +50,14 @@ function Footer() {
                 </Grid>
 
                 <Grid container className={classes.footerIcons}>
-                    <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
+                    <Grid item xs={2} sm={2} md={3} lg={3} xl={3}>
                         <img src={eshop} width="40px" />
                     </Grid>
-                    <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
-                        <FacebookIcon fontSize="large" color="primary" /> 
-                        <InstagramIcon fontSize="large" color="primary" />
-                        <TwitterIcon fontSize="large" color="primary" />
-                        <WhatsAppIcon fontSize="large" color="primary" />
+                    <Grid item xs={6} sm={6} md={3} lg={3} xl={3}>
+                        <FacebookIcon fontSize="large" color="secondary" /> 
+                        <InstagramIcon fontSize="large" color="secondary" />
+                        <TwitterIcon fontSize="large" color="secondary" />
+                        <WhatsAppIcon fontSize="large" color="secondary" />
                     </Grid>
 
                     <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>

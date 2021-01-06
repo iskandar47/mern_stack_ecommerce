@@ -1,10 +1,16 @@
 import { makeStyles } from "@material-ui/core"
 import banner from "../../assets/background.jpg"
+import bg from "../../assets/homeBg.svg"
 
 export const useStyles = makeStyles((theme) => ({
     container : {
         backgroundImage : `url("${banner}")`,
         backgroundSize : "cover",
+    },
+    homeSections : {
+        backgroundImage : `url("${bg}")`,
+        backgroundSize : "cover",
+        paddingBottom : 100,
     },
     section : {
         justifyContent : "center",
@@ -44,16 +50,23 @@ export const useStyles = makeStyles((theme) => ({
         boxShadow : "2px 5px 10px #CCC"
     },
     sectionTypo : {
-        borderLeft : "8px solid #32289B",
+        borderLeft : "8px solid #053B4B",
         paddingLeft : 24,
         "& button" : {
             marginTop : 32
+        },
+        [theme.breakpoints.down("sm")] : {
+            borderLeft : "none",
+            paddingLeft : 0,
+            paddingTop : 12,
+            marginTop : 12,
+            borderTop : "2px solid #CCC"
         }
     },
     line : {
         width : 50,
         height : 200,
-        backgroundColor : "#32289B",
+        backgroundColor : "#053B4B",
         position : "absolute",
         bottom : -100,
         right : 300,

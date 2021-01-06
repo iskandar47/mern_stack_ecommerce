@@ -32,11 +32,11 @@ function Home() {
                 <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                     <Box>
                         <Typography variant="h1" color="secondary">SIMPLICITY</Typography>
-                        <Typography variant="body1">is the key note of all true elegance .</Typography>
-                        <Typography variant="body1">Take your elegance to higher levels with eSTORE .</Typography>
+                        <Typography variant="body1" color="secondary">is the key note of all true elegance .</Typography>
+                        <Typography variant="body1" color="secondary">Take your elegance to higher levels with eSTORE .</Typography>
                         
                         <Box pt={1}>
-                            <Button variant="contained" color="secondary">
+                            <Button variant="contained" color="primary">
                                 Browse all Products
                             </Button>
                         </Box>
@@ -49,7 +49,7 @@ function Home() {
                 {
                     arrow ? 
                     <Box className={classes.arrow} onClick={scroller}>
-                        <ArrowDownwardOutlinedIcon color="secondary" /> 
+                        <ArrowDownwardOutlinedIcon color="primary" /> 
                     </Box> :
                     null
                 }
@@ -59,6 +59,7 @@ function Home() {
             </Grid>
         </Container>
         </Container>
+        <Container maxWidth={false} className={classes.homeSections}>
         <Container maxWidth="xl">
             <Grid container className={classes.section} ref={scndSection}>
 
@@ -69,11 +70,11 @@ function Home() {
                 <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                     <Box className={classes.sectionTypo}>
                         <Typography variant="h2" color="secondary">Tshirts</Typography>
-                        <Typography variant="body1">is the key note of all true elegance .</Typography>
-                        <Typography variant="body1">Take your elegance to higher level with eSTORE</Typography>
+                        <Typography variant="body1" color="textPrimary">is the key note of all true elegance .</Typography>
+                        <Typography variant="body1" color="textPrimary">Take your elegance to higher level with eSTORE</Typography>
                         
                         <Box pt={1}>
-                            <Button variant="outlined" color="secondary">
+                            <Button variant="outlined" color="primary">
                                 Shop Now
                             </Button>
                         </Box>
@@ -145,6 +146,7 @@ function Home() {
                     </Box>
                 </Grid>
             </Grid>
+            </Container>
         </Container>
         </>
     )

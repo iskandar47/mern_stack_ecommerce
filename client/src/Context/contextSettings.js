@@ -12,6 +12,7 @@ function ContextProvider({children}) {
         i18n.changeLanguage(lang)
         setDir(i18n.dir())
     }
+    
     const dirSettings = { dir, setDir, switchLang, language }
     
     return (
