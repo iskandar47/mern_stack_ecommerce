@@ -8,7 +8,7 @@ export default {
     },
     text : {
         primary : "#444",
-        secondary : "#000"
+        secondary : "#9B9B9B"
     },
     error : {
         main : red.A400

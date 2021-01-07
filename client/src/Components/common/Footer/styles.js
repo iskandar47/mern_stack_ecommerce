@@ -4,6 +4,7 @@ export const useStyles = makeStyles((theme) => ({
     footer : {
         backgroundColor : "#FAFAFA",
         display : "flex",
+        marginTop : 30,
         padding : "32px 0px",
         "& h4" : {
             paddingBottom : 16
