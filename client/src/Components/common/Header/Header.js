@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     margin : "0px 16px",
     "& a" : {
       textDecoration : "none",
-      color : "#053B4B",
+      color : "#444444",
       margin : "0px 8px"
     }
   },
