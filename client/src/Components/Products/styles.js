@@ -35,7 +35,7 @@ export const useStyles = makeStyles((theme)=> ({
         flexDirection : "row",
         justifyContent : "space-between",
         alignItems : "flex-end",
-        backgroundColor : "#EFEFEF",
+        backgroundColor : "#fafafa",
         borderRadius : 4,
         "& .MuiBox-root" : {
           display : "flex",

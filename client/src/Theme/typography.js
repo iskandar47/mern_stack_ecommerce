@@ -44,7 +44,7 @@ export default {
             letterSpacing: '-0.05px',
         },
         subtitle2 : {
-            fontSize : 22,
+            fontSize : 15,
             fontWeight : 500,
             letterSpacing: '-0.05px',
         },

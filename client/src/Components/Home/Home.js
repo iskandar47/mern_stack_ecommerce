@@ -69,7 +69,7 @@ function Home() {
                 
                 <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                     <Box className={classes.sectionTypo}>
-                        <Typography variant="h2" color="secondary">Tshirts</Typography>
+                        <Typography variant="h2" color="secondary">Clothing</Typography>
                         <Typography variant="body1" color="textPrimary">is the key note of all true elegance .</Typography>
                         <Typography variant="body1" color="textPrimary">Take your elegance to higher level with eSTORE</Typography>
                         
@@ -87,7 +87,7 @@ function Home() {
                 <Grid container className={(classes.section)} >
                     <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                         <Box className={classes.sectionTypo}>
-                            <Typography variant="h2" color="secondary">Jeans</Typography>
+                            <Typography variant="h2" color="secondary">Cosmetics</Typography>
                             <Typography variant="body1">is the key note of all true elegance .</Typography>
                             <Typography variant="body1">Take your elegance to higher levels with eSTORE</Typography>
                             
