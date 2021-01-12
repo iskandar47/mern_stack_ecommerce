@@ -45,5 +45,18 @@ export const useStyles = makeStyles((theme)=> ({
         "& .MuiInputBase-input" : {
           paddingBottom : 0
         }
+      },
+      mobileFilterBar : {
+        display : "flex",
+        alignItems : "flex-end",
+        paddingBottom : 16,
+        marginBottom : 16,
+        backgroundColor : "#fafafa", 
+        "& div:first-child" : {
+          display : "flex",
+          flexDirection : "row",
+          alignItems : "center"
+        },
+        
       }
 }))

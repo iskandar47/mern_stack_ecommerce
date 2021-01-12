@@ -6,7 +6,8 @@ import { useStyles } from "./styles"
 function Login() {
     const classes = useStyles()
     return (
-        <Container maxWidth={false} className={classes.container}>
+        
+            <Container maxWidth={false} className={classes.container}>
             <Container maxWidth="xl">
                 <Grid className={classes.form}>
                     <Typography variant="h2" color="secondary" align="center">Log in</Typography>
@@ -38,7 +39,7 @@ function Login() {
                     <Link to="/login">Reset password</Link>
                 </Typography>
             </Container>
-        </Container>
+            </Container>
     )
 }
 

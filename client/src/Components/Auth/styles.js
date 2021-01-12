@@ -3,7 +3,19 @@ import { makeStyles } from "@material-ui/core"
 export const useStyles = makeStyles((theme)=> ({
     container : {
         padding : "5vh 0vh",
+        /* backgroundColor : "rgba(256, 256, 256, 0.7)" */
     },
+    /* shapes : {
+        zIndex : -10
+    },
+    circle : {
+        height : 700,
+        width : 700,
+        borderRadius : "50%",
+        position : "absolute",
+        background: "radial-gradient(circle, rgba(56,142,143,1) 13%, rgba(255,255,255,1) 38%)",
+        zIndex : -9
+    }, */
     socialAccounts : {
         display : "flex",
         justifyContent : "space-between",

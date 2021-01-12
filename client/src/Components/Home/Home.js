@@ -29,7 +29,7 @@ function Home() {
         <Container maxWidth={false} className={classes.container}>
         <Container maxWidth="xl">
             <Grid container className={clsx(classes.section, classes.hero)}>
-                <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+                <Grid item xs={12} sm={12} md={6} lg={6} xl={6} >
                     <Box>
                         <Typography variant="h1" color="secondary">SIMPLICITY</Typography>
                         <Typography variant="body1" color="secondary">is the key note of all true elegance .</Typography>
