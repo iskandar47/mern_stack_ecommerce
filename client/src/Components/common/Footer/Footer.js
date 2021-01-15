@@ -20,32 +20,32 @@ function Footer() {
                 <Grid container>
                     <Grid item xs={2} sm={2} md={3} lg={3} xl={3}>
                         <Typography variant="h4" color="primary">Shop</Typography>
-                        <Typography variant="h6">Men</Typography>
-                        <Typography variant="h6">Women</Typography>
-                        <Typography variant="h6">Kids</Typography>
+                        <Typography variant="h6" color="secondary">Men</Typography>
+                        <Typography variant="h6" color="secondary">Women</Typography>
+                        <Typography variant="h6" color="secondary">Kids</Typography>
                     </Grid>
                     <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
                         <Typography variant="h4" color="primary">Accessoire</Typography>
-                        <Typography variant="h6">Bags</Typography>
-                        <Typography variant="h6">Phone cases</Typography>
-                        <Typography variant="h6">Watchs</Typography>
-                        <Typography variant="h6">Cosmetics</Typography>
-                        <Typography variant="h6">Parfum</Typography>
+                        <Typography variant="h6" color="secondary">Bags</Typography>
+                        <Typography variant="h6" color="secondary">Phone cases</Typography>
+                        <Typography variant="h6" color="secondary">Watchs</Typography>
+                        <Typography variant="h6" color="secondary">Cosmetics</Typography>
+                        <Typography variant="h6" color="secondary">Parfum</Typography>
                     </Grid>
                     <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
                         <Typography variant="h4" color="primary">Support</Typography>
-                        <Typography variant="h6">Customer service</Typography>
-                        <Typography variant="h6">Order status</Typography>
-                        <Typography variant="h6">Store location</Typography>
+                        <Typography variant="h6" color="secondary">Customer service</Typography>
+                        <Typography variant="h6" color="secondary">Order status</Typography>
+                        <Typography variant="h6" color="secondary">Store location</Typography>
                     </Grid>
                     <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
                         <Typography variant="h4" color="primary">Contact</Typography>
-                        <Typography variant="h5">Email :</Typography>
-                        <Typography variant="h6">email@gmail.com</Typography>
-                        <Typography variant="h5">Phone :</Typography>
-                        <Typography variant="h6">+213 775 897 433</Typography>
-                        <Typography variant="h5">Adress :</Typography>
-                        <Typography variant="h6">21 street <br/> west algiers 16500</Typography>
+                        <Typography variant="h5" color="primary">Email :</Typography>
+                        <Typography variant="h6" color="secondary">email@gmail.com</Typography>
+                        <Typography variant="h5" color="primary">Phone :</Typography>
+                        <Typography variant="h6" color="secondary">+213 775 897 433</Typography>
+                        <Typography variant="h5" color="primary">Adress :</Typography>
+                        <Typography variant="h6" color="secondary">21 street <br/> west algiers 16500</Typography>
                     </Grid>
                 </Grid>
 
@@ -62,10 +62,10 @@ function Footer() {
 
                     <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
                     <Box className={classes.langBtn} color="inherit" onClick={()=>switchLang(language)}>
-                        <Typography variant="h6">
+                        <Typography variant="h6" color="secondary">
                             {language === "ar" ? "العربيه": "English"}
                         </Typography>
-                        <LanguageIcon fontSize="small" />
+                        <LanguageIcon color="secondary" fontSize="small" />
                     </Box>
                     </Grid>
 

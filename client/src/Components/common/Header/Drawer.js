@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react';
 import clsx from 'clsx';
-import { makeStyles, SwipeableDrawer, List, ListItem, Divider, ListItemText } from '@material-ui/core';
+import { makeStyles, SwipeableDrawer, List, ListItem, Divider, ListItemText, Typography } from '@material-ui/core';
 import { useTranslation } from "react-i18next"
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
@@ -52,7 +52,8 @@ const useStyles = makeStyles({
         <List>
           {['Home', 'Products', 'Categories', 'Login'].map((text, index) => (
             <ListItem button key={index}>
-              <ListItemText primary={t(text)} />
+              {/* <ListItemText primary={t(text)} /> */}
+              <ListItemText primary={<Typography variant="h6">{t(text)}</Typography>} />
             </ListItem>
           ))}
         </List>

@@ -1,10 +1,15 @@
 import { red } from "@material-ui/core/colors"
 export default {
     primary : {
-        main : "#388E8F",
+        /* main : "#ff4d00" */
+        main : "#ff9a00"
+        /* main : "rgb(64, 75, 105)", */
     },
     secondary : {
-        main : "#053B4B"
+        /* main : "#64a1ff" */
+        main : "#555",
+        /* main : "rgb(20, 37, 66)", */
+        contrastText: "#fff"
     },
     text : {
         primary : "#444",

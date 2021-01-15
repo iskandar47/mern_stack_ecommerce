@@ -6,18 +6,28 @@ import eShop from "../../../assets/e.svg"
 import { makeStyles, AppBar, Toolbar, Button, IconButton, Typography, Container, Hidden, Box } from '@material-ui/core';
 import LanguageIcon from '@material-ui/icons/Language';
 import TemporaryDrawer from "./Drawer"
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    "& .MuiToolbar-gutters" : {padding : 0}
+    "& .MuiToolbar-gutters" : {padding : 0},
+    "& .MuiAppBar-root" : {
+      top : 37,
+      left : 0,
+      [theme.breakpoints.down("md")] : {
+        top : 0,
+      }
+    }
   },
   links: {
     flexGrow: 1,
     margin : "0px 16px",
     "& a" : {
       textDecoration : "none",
-      color : "#444444",
+      /* color : "rgb(64, 75, 105)", */
+      color : "#555",
       margin : "0px 8px"
     }
   },
@@ -25,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize : 16,
     margin : "0px 16px",
     textTransform : "lowerCase",
+    color : "#555",
     "&:hover" : {backgroundColor : "transparent"}
   },
 }));
@@ -36,10 +47,11 @@ export default function Header() {
   const {t} = useTranslation()
   const {dirSettings : { language, switchLang}} = useContext(Context)
   
+  console.log(history.location.pathname)
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="inherit" elevation={4}>
+      <AppBar position="static" color="inherit" elevation={0} position={"absolute"}>
         <Container maxWidth="xl">
           <Toolbar>
 
@@ -52,23 +64,25 @@ export default function Header() {
                 <Link to="/">{t("Home")}</Link> 
                 <Link to="/products">{t("Products")}</Link>
                 <Link to="/categories">{t("Categories")}</Link>
-                <Link to="/dashbord">{t("Dashbord")}</Link>
               </Hidden>
             </Typography>
             
-            <Button className={classes.langBtn} color="inherit" onClick={()=>switchLang(language)}>
+            <Button className={classes.langBtn} color="secondary" onClick={()=>switchLang(language)}>
               {language === "ar" ? "العربيه": "English"}
-              <LanguageIcon fontSize="small" style={{margin : "0px 4px"}} />
+              <LanguageIcon color="secondary" fontSize="small" style={{margin : "0px 4px"}} />
             </Button>
 
             <Hidden smDown>
-              <Button color="primary" variant="outlined" onClick={()=> history.push("/login")}>
+              {/* <Button color="secondary" variant="outlined" onClick={()=> history.push("/login")}>
                 Login
-              </Button>
-              <Box pl={1} pr={1}></Box>
-              <Button color="secondary" variant="contained" onClick={()=> history.push("/register")}>
+              </Button> */}
+              <ShoppingCartIcon color="secondary" />
+              <Box pl={3} pr={0}></Box>
+              <ExitToAppIcon color="secondary" onClick={()=> history.push("/register")} />
+              
+              {/* <Button color="secondary" variant="contained" onClick={()=> history.push("/register")}>
                 Register
-              </Button>
+              </Button> */}
             </Hidden>
             <Hidden mdUp>  
             

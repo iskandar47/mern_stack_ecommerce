@@ -24,7 +24,7 @@ function FilterBar() {
                     <DropDown listName="Cosmetics" listItems={cosmetics} />
                     <DropDown listName="Accessories" listItems={accessories} />
                     <Box mr={1}>
-                        <TextField id="standard-search" label={<SearchIcon color="primary" />} type="search" />
+                        <TextField  id="standard-search" label={<SearchIcon color="secondary" />} type="search" />
                     </Box>
                 </Grid>
             </Container>

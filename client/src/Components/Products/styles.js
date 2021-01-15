@@ -7,7 +7,11 @@ export const useStyles = makeStyles((theme)=> ({
         maxWidth: "100%",
         "& .MuiCardContent-root" : {
             padding : "8px 16px"
-        }
+        },
+        /* "& .MuiCardActions-root" : {
+          display : "flex",
+          justifyContent : "space-between"
+        } */
       },
       image : {
           display : "flex",
@@ -35,7 +39,8 @@ export const useStyles = makeStyles((theme)=> ({
         flexDirection : "row",
         justifyContent : "space-between",
         alignItems : "flex-end",
-        backgroundColor : "#fafafa",
+        backgroundColor : "#FAFAFA",
+        borderBottom : "4px solid #ff9a00",
         borderRadius : 4,
         "& .MuiBox-root" : {
           display : "flex",

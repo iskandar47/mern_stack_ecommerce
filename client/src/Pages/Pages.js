@@ -7,6 +7,7 @@ import Header from '../Components/common/Header/Header'
 import Footer from '../Components/common/Footer/Footer'
 import Login from "../Components/Auth/Login"
 import Register from "../Components/Auth/Register"
+import AdsBar from '../Components/common/Header/AdsBar'
 
 const useStyles = makeStyles((theme) => ({
     
@@ -18,6 +19,7 @@ function Pages() {
     return (
         <Box>
             <Router>
+                <AdsBar />
                 <Header/>
                 <Switch>
                     <Route exact path="/"><Home /></Route>

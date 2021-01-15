@@ -2,6 +2,8 @@ import React from 'react'
 import { useStyles } from "./styles"
 import { Card, Box, Typography, CardContent, CardActions, Button } from '@material-ui/core'
 import tshirt from "../../assets/tshirt.png"
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
 function ProductCard({name}) {
     const classes = useStyles()
@@ -31,11 +33,11 @@ function ProductCard({name}) {
                 </CardContent>
 
             <CardActions>
-                <Button size="small" color="primary">
+                <Button size="small" color="secondary" variant="contained">
                 Order
                 </Button>
-                <Button size="small" color="primary">
-                Details
+                <Button size="small" color="primary" variant="outlined" endIcon={<AddShoppingCartIcon fontSize="small" />}>
+                    add to cart
                 </Button>
             </CardActions>
         </Card>

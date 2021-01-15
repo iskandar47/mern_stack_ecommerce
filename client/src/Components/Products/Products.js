@@ -8,7 +8,7 @@ function Products() {
     const classes = useStyles()
     const products = ["Dsquared", "Zara", "Fendi", "Levis", "Nike", "Armani", "Versace", "Valentino" ]
     return (
-        <Container maxWidth={false} style={{paddingTop : "5vh"}}>
+        <Container maxWidth={false} style={{paddingTop : "15vh"}}>
             <FilterBar />
             <Container maxWidth="xl">
                 <Grid container spacing={5}>

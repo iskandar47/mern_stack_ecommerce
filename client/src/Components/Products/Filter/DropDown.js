@@ -5,6 +5,7 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 const useStyles = makeStyles((theme) => ({
     dropDown : {
+        position : "relative",
         "& div:first-child" : {
             cursor : "pointer",
             position : "relative",
@@ -13,11 +14,11 @@ const useStyles = makeStyles((theme) => ({
     
     drop : {
         position : "absolute",
-        top : 140,
+        top : 20,
         backgroundColor : "#fafafa",
         borderTop : "none",
         borderRadius : 2,
-        borderBottom : "5px solid #388E8F",
+        borderBottom : "5px solid #ff9a00",
         "& ul" : {
             listStyle : "none",
             padding : "8px 16px 0px 8px",
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
                 paddingTop : 4,
                 cursor : "pointer",
             "& :hover" : {
-                color : "#053B4B"
+                color : "#ff9a00"
             }
             }
         }
@@ -35,16 +36,15 @@ const useStyles = makeStyles((theme) => ({
 function DropDown({listItems, listName}) {
     const classes = useStyles()
     const [drop, setDrop] = useState(false)
-    console.log(drop)
 
     return (
         <Box className={classes.dropDown}  onMouseLeave={()=> setDrop(false)}  onMouseMove={()=> setDrop(true)} >
             <Box pl={1}>
-                <Typography variant="h6" color={!drop ? "primary" : "secondary"}>{listName}</Typography>
+                <Typography variant="h6" color={!drop ? "secondary" : "primary"}>{listName}</Typography>
                 {
                     !drop ?
-                    <ExpandMoreIcon color="primary" /> :
-                    <ExpandLessIcon color="secondary" />
+                    <ExpandMoreIcon color="secondary" /> :
+                    <ExpandLessIcon color="primary" />
                 }
             </Box>
             {
@@ -52,7 +52,7 @@ function DropDown({listItems, listName}) {
                 null :
                 <Box className={classes.drop}>
                     <ul>
-                        {listItems.map((item, i)=><li key={i}><Typography color="primary" variant="subtitle2">{item}</Typography></li>)}
+                        {listItems.map((item, i)=><li key={i}><Typography color="secondary" variant="subtitle2">{item}</Typography></li>)}
                     </ul>
                 </Box>
             }

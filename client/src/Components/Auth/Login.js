@@ -35,8 +35,12 @@ function Login() {
                     </form>
                 </Grid>
                 <Typography align="center" variant="body2" color="secondary">
-                    Forgot password ? 
+                    Forgot password ? {" "}
                     <Link to="/login">Reset password</Link>
+                </Typography>
+                <Typography align="center" variant="body2" color="secondary">
+                    You don't have an account ? {" "}
+                    <Link to="/register">Create account</Link>
                 </Typography>
             </Container>
             </Container>

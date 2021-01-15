@@ -49,7 +49,7 @@ export default {
             letterSpacing: '-0.05px',
         },
         body1 : {
-            fontSize : 22,
+            fontSize : 20,
             fontWeight : 400,
             letterSpacing: '-0.05px',
             '@media (max-width:600px)': {

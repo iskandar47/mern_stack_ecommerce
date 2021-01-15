@@ -1,11 +1,17 @@
 import { makeStyles } from "@material-ui/core"
-import banner from "../../assets/background.jpg"
+/* import banner from "../../assets/background.jpg" */
+/* import banner from "../../assets/pexels-sonny-sixteen-2035416.jpg" */
+import banner from "../../assets/pexels-kaique-rocha-242124.jpg"
 import bg from "../../assets/homeBg.svg"
 
 export const useStyles = makeStyles((theme) => ({
     container : {
         backgroundImage : `url("${banner}")`,
         backgroundSize : "cover",
+        display : "flex",
+        alignItems : "center",
+        height : "95vh",
+        position : "relative"
     },
     homeSections : {
         backgroundImage : `url("${bg}")`,
@@ -33,8 +39,14 @@ export const useStyles = makeStyles((theme) => ({
         }
     },
     hero : {
-        height : "92vh!important",
+        backgroundColor : "rgba(256, 256, 256, 0.2)",
+        backdropFilter : "blur(4px)",
+        border : "1px solid #CCC",
+        borderRadius : 12,
         boxShadow : "none!important",
+        boxShadow : "3px 5px 15px #333",
+        padding : "52px 32px",
+        zIndex : 10
     },
     arrow : {
         width : 50,
@@ -45,12 +57,14 @@ export const useStyles = makeStyles((theme) => ({
         alignItems : "center!important",
         borderRadius : "50%",
         position : "fixed",
-        bottom : 20,
+        bottom : 8,
+        left : "50%",
+        transform : "translate(-50%)",
         cursor : "pointer",
-        boxShadow : "2px 5px 10px #CCC"
+        boxShadow : "2px 5px 10px #333"
     },
     sectionTypo : {
-        borderLeft : "8px solid #053B4B",
+        borderLeft : "8px solid #555",
         paddingLeft : 24,
         "& button" : {
             marginTop : 32
@@ -63,12 +77,5 @@ export const useStyles = makeStyles((theme) => ({
             borderTop : "2px solid #CCC"
         }
     },
-    line : {
-        width : 50,
-        height : 200,
-        backgroundColor : "#053B4B",
-        position : "absolute",
-        bottom : -100,
-        right : 300,
-    }
+    
 }));

@@ -27,25 +27,27 @@ function Home() {
     return (
         <>
         <Container maxWidth={false} className={classes.container}>
-        <Container maxWidth="xl">
-            <Grid container className={clsx(classes.section, classes.hero)}>
-                <Grid item xs={12} sm={12} md={6} lg={6} xl={6} >
-                    <Box>
-                        <Typography variant="h1" color="secondary">SIMPLICITY</Typography>
-                        <Typography variant="body1" color="secondary">is the key note of all true elegance .</Typography>
-                        <Typography variant="body1" color="secondary">Take your elegance to higher levels with eSTORE .</Typography>
-                        
-                        <Box pt={1}>
-                            <Button variant="contained" color="primary">
-                                Browse all Products
-                            </Button>
+            <Container maxWidth="xl">
+                <Grid container className={clsx(classes.section, classes.hero)}>
+                    <Grid item xs={12} sm={12} md={6} lg={6} xl={6} >
+                        <Box>
+                            <Typography variant="h1" color="primary">SIMPLICITY</Typography>
+                            <Typography variant="body1" color="secondary">is the key note of all true elegance .</Typography>
+                            <Typography variant="body1" color="secondary">Take your elegance to higher levels with eSTORE .</Typography>
+                            
+                            <Box pt={1}>
+                                <Button variant="contained" color="secondary">
+                                    Browse all Products
+                                </Button>
+                            </Box>
                         </Box>
-                    </Box>
-                </Grid>
+                    </Grid>
 
-                <Grid item xs={12} sm={12} md={6} lg={6} xl={6} style={{position : "relative",}}>
-                    <img width="100%" src={Banner} alt="banner" />
+                    <Grid item xs={12} sm={12} md={6} lg={6} xl={6} >
+                        <img width="100%" src={Banner} alt="banner" />
+                    </Grid>
                 </Grid>
+            </Container>
                 {
                     arrow ? 
                     <Box className={classes.arrow} onClick={scroller}>
@@ -53,99 +55,94 @@ function Home() {
                     </Box> :
                     null
                 }
-                <Hidden mdDown>
-                <Box className={classes.line}></Box>
-                </Hidden>
-            </Grid>
-        </Container>
         </Container>
         <Container maxWidth={false} className={classes.homeSections}>
-        <Container maxWidth="xl">
-            <Grid container className={classes.section} ref={scndSection}>
+            <Container maxWidth="xl">
+                <Grid container className={classes.section} ref={scndSection}>
 
-                <Grid item  md={6} lg={6} xl={6}>
-                    <img width="50%" src={tshirt} alt="banner" />
-                </Grid>
-                
-                <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-                    <Box className={classes.sectionTypo}>
-                        <Typography variant="h2" color="secondary">Clothing</Typography>
-                        <Typography variant="body1" color="textPrimary">is the key note of all true elegance .</Typography>
-                        <Typography variant="body1" color="textPrimary">Take your elegance to higher level with eSTORE</Typography>
-                        
-                        <Box pt={1}>
-                            <Button variant="outlined" color="primary">
-                                Shop Now
-                            </Button>
-                        </Box>
-                    </Box>
-                </Grid>
-            </Grid>
-
-
-            <Hidden mdDown>
-                <Grid container className={(classes.section)} >
+                    <Grid item  md={6} lg={6} xl={6}>
+                        <img width="50%" src={tshirt} alt="banner" />
+                    </Grid>
+                    
                     <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                         <Box className={classes.sectionTypo}>
-                            <Typography variant="h2" color="secondary">Cosmetics</Typography>
-                            <Typography variant="body1">is the key note of all true elegance .</Typography>
-                            <Typography variant="body1">Take your elegance to higher levels with eSTORE</Typography>
+                            <Typography variant="h2" color="primary">Clothing</Typography>
+                            <Typography variant="body1" color="secondary">is the key note of all true elegance .</Typography>
+                            <Typography variant="body1" color="secondary">Take your elegance to higher level with eSTORE</Typography>
                             
                             <Box pt={1}>
-                                <Button variant="outlined" color="secondary">
-                                    Shop Now
-                                </Button>
-                            </Box>
-                        </Box>
-                    </Grid>
-
-                    <Grid item lg={6} xl={6} >
-                        <img width="40%" src={jeans} alt="banner" />
-                    </Grid>
-                </Grid>
-            </Hidden>
-
-            <Hidden mdUp>
-                <Grid container className={(classes.section)} >
-
-                    <Grid item lg={6} xl={6} >
-                        <img width="60%" src={jeans} alt="banner" />
-                    </Grid>
-
-                    <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-                        <Box className={classes.sectionTypo}>
-                            <Typography variant="h2" color="secondary">Jeans</Typography>
-                            <Typography variant="body1">is the key note of all true elegance .</Typography>
-                            <Typography variant="body1">Take your elegance to higher levels with eSTORE</Typography>
-                            
-                            <Box pt={1}>
-                                <Button variant="outlined" color="secondary">
+                                <Button variant="contained" color="secondary">
                                     Shop Now
                                 </Button>
                             </Box>
                         </Box>
                     </Grid>
                 </Grid>
-            </Hidden>
-            <Grid container className={(classes.section)} >
-                <Grid item  md={6} lg={6} xl={6}>
-                    <img width="40%" src={bag} alt="banner" />
-                </Grid>
-                
-                <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-                    <Box className={classes.sectionTypo}>
-                        <Typography variant="h2" color="secondary">Accessories</Typography>
-                        <Typography variant="body1">is the key note of all true elegance .</Typography>
-                        <Typography variant="body1">Take your elegance to higher level with eSTORE</Typography>
-                        
-                        <Box pt={1}>
-                            <Button variant="outlined" color="secondary">
-                                Shop Now
-                            </Button>
+
+
+                <Hidden mdDown>
+                    <Grid container className={(classes.section)} >
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+                            <Box className={classes.sectionTypo}>
+                                <Typography variant="h2" color="primary">Cosmetics</Typography>
+                                <Typography variant="body1">is the key note of all true elegance .</Typography>
+                                <Typography variant="body1">Take your elegance to higher levels with eSTORE</Typography>
+                                
+                                <Box pt={1}>
+                                    <Button variant="contained" color="secondary">
+                                        Shop Now
+                                    </Button>
+                                </Box>
+                            </Box>
+                        </Grid>
+
+                        <Grid item lg={6} xl={6} >
+                            <img width="40%" src={jeans} alt="banner" />
+                        </Grid>
+                    </Grid>
+                </Hidden>
+
+                <Hidden mdUp>
+                    <Grid container className={(classes.section)} >
+
+                        <Grid item lg={6} xl={6} >
+                            <img width="60%" src={jeans} alt="banner" />
+                        </Grid>
+
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+                            <Box className={classes.sectionTypo}>
+                                <Typography variant="h2" color="primary">Jeans</Typography>
+                                <Typography variant="body1">is the key note of all true elegance .</Typography>
+                                <Typography variant="body1">Take your elegance to higher levels with eSTORE</Typography>
+                                
+                                <Box pt={1}>
+                                    <Button variant="contained" color="secondary">
+                                        Shop Now
+                                    </Button>
+                                </Box>
+                            </Box>
+                        </Grid>
+                    </Grid>
+                </Hidden>
+                <Grid container className={(classes.section)} >
+                    <Grid item  md={6} lg={6} xl={6}>
+                        <img width="40%" src={bag} alt="banner" />
+                    </Grid>
+                    
+                    <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+                        <Box className={classes.sectionTypo}>
+                            <Typography variant="h2" color="primary">Accessories</Typography>
+                            <Typography variant="body1">is the key note of all true elegance .</Typography>
+                            <Typography variant="body1">Take your elegance to higher level with eSTORE</Typography>
+                            
+                            <Box pt={1}>
+                                <Button variant="contained" color="secondary">
+                                    Shop Now
+                                </Button>
+                            </Box>
                         </Box>
-                    </Box>
+                    </Grid>
                 </Grid>
-            </Grid>
             </Container>
         </Container>
         </>
