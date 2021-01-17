@@ -57,7 +57,9 @@ export default function Header() {
         <Container maxWidth="xl">
           <Toolbar>
 
-            <IconButton edge="start" className={classes.logo} color="inherit" aria-label="menu">
+            <IconButton edge="start" className={classes.logo} color="inherit" aria-label="menu"
+            onClick={()=> history.push("/")}
+            >
               <img src={eShop} alt="logo" width="40px" />
             </IconButton>
             
@@ -71,7 +73,7 @@ export default function Header() {
             
             <Button className={classes.langBtn} color="secondary" onClick={()=>switchLang(language)}>
               {language === "ar" ? "العربيه": "English"}
-              <LanguageIcon color="secondary" fontSize="small" style={{margin : "0px 4px"}} />
+              <LanguageIcon color="secondary" /* fontSize="small" */ style={{margin : "0px 4px"}} />
             </Button>
 
             <Hidden smDown>
