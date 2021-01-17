@@ -4,7 +4,13 @@ export const useStyles = makeStyles((theme) => ({
     list: {
         width: "450px",
         height : "100vh",
-        backgroundColor : "#fff"
+        backgroundColor : "#fff",
+        [theme.breakpoints.down("sm")] : {
+            width : 350
+        },
+        [theme.breakpoints.down("xs")] : {
+            width : 300
+        }
     },
     cartProduct : {
         display : "flex",
