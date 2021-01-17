@@ -1,15 +1,14 @@
-import React, {useState, useContext} from 'react';
+import React from 'react';
 import clsx from 'clsx';
-import { makeStyles, SwipeableDrawer, List, ListItem, Divider, ListItemText, Typography } from '@material-ui/core';
+import { makeStyles, Box, SwipeableDrawer, List, ListItem, Divider, ListItemText, Typography } from '@material-ui/core';
 import { useTranslation } from "react-i18next"
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from "@material-ui/icons/Menu"
+import CloseIcon from '@material-ui/icons/Close';
+import Cart from "../../Cart/Cart"
 
 const useStyles = makeStyles({
     list: {
       width: 250,
-      paddingTop : 44,
       backgroundColor : "#FFF",
       height : "100%"
     },
@@ -42,17 +41,15 @@ const useStyles = makeStyles({
   
     const list = (anchor) => (
       <div
-        className={clsx(classes.list, {
-          [classes.fullList]: anchor === 'top' || anchor === 'bottom',
-        })}
+        className={classes.list}
         role="presentation"
         onClick={toggleDrawer(anchor, false)}
         onKeyDown={toggleDrawer(anchor, false)}
       >
+        
         <List>
           {['Home', 'Products', 'Categories', 'Login'].map((text, index) => (
             <ListItem button key={index}>
-              {/* <ListItemText primary={t(text)} /> */}
               <ListItemText primary={<Typography variant="h6">{t(text)}</Typography>} />
             </ListItem>
           ))}

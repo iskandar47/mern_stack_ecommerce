@@ -11,7 +11,10 @@ export const useStyles = makeStyles((theme) => ({
         display : "flex",
         alignItems : "center",
         height : "95vh",
-        position : "relative"
+        position : "relative",
+        [theme.breakpoints.down("md")] : {
+            height : "100vh"
+        }
     },
     homeSections : {
         backgroundImage : `url("${bg}")`,
@@ -46,7 +49,10 @@ export const useStyles = makeStyles((theme) => ({
         boxShadow : "none!important",
         boxShadow : "3px 5px 15px #333",
         padding : "52px 32px",
-        zIndex : 10
+        zIndex : 10,
+        [theme.breakpoints.down("md")] : {
+            marginTop : 40
+        }
     },
     arrow : {
         width : 50,

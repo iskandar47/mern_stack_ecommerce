@@ -38,7 +38,7 @@ function DropDown({listItems, listName}) {
     const [drop, setDrop] = useState(false)
 
     return (
-        <Box className={classes.dropDown}  onMouseLeave={()=> setDrop(false)}  onMouseMove={()=> setDrop(true)} >
+        <Box className={classes.dropDown}  onMouseLeave={()=> setDrop(false)}  onMouseOver={()=> setDrop(true)} >
             <Box pl={1}>
                 <Typography variant="h6" color={!drop ? "secondary" : "primary"}>{listName}</Typography>
                 {

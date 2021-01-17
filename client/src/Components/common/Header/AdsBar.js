@@ -4,19 +4,18 @@ import { makeStyles } from "@material-ui/core"
 
 const useStyles = makeStyles((theme)=> ({
     adBar : {
-        /* height : 40, */
-        width : "100%",
-        /* backgroundColor : "rgb(64, 75, 105)", */
-        /* background : "linear-gradient(142deg, rgba(0, 0, 119, 1) 0%, rgba(136,252,254,1) 100%)",
-        background: rgb(255,154,0); */
-        background: "linear-gradient(142deg, rgba(255,154,0,1) 0%, rgba(255,77,0,1) 100%)"
+        width : "100vw",
+        overflow : "hidden",
+        background: "linear-gradient(142deg, rgba(255,154,0,1) 0%, rgba(255,77,0,1) 100%)",
     },
     typo : {
+        whiteSpace : "nowrap",
+        overflow : "hidden",
         padding : "6px 0px",
-        animation: `$anim1 20s ${theme.transitions.easing.easeIn}`,
+        animation: `$anim1 15s ${theme.transitions.easing.easeIn}`,
         animationIterationCount : "infinite",
-        opacity: 1,
-        transform: "translateX(100%)",
+        willChange : "transform",
+        /* transform: "translateX(100%)", */
         "& h6" : {
             color : "#FFF",
             margin : 0
@@ -52,7 +51,6 @@ function AdsBar() {
                         Buy 4 items & save 20% 
                     </Typography>
                 </Box>
-                
             </Container>
         </Hidden>
     )

@@ -8,6 +8,7 @@ import LanguageIcon from '@material-ui/icons/Language';
 import TemporaryDrawer from "./Drawer"
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import Cart from "../../../Components/Cart/Cart"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -48,6 +49,7 @@ export default function Header() {
   const {dirSettings : { language, switchLang}} = useContext(Context)
   
   console.log(history.location.pathname)
+  
 
   return (
     <div className={classes.root}>
@@ -73,19 +75,15 @@ export default function Header() {
             </Button>
 
             <Hidden smDown>
-              {/* <Button color="secondary" variant="outlined" onClick={()=> history.push("/login")}>
-                Login
-              </Button> */}
-              <ShoppingCartIcon color="secondary" />
+             
+              <Cart />
               <Box pl={3} pr={0}></Box>
               <ExitToAppIcon color="secondary" onClick={()=> history.push("/register")} />
               
-              {/* <Button color="secondary" variant="contained" onClick={()=> history.push("/register")}>
-                Register
-              </Button> */}
             </Hidden>
             <Hidden mdUp>  
-            
+              <Cart />
+              <Box pr={4}></Box>
               <TemporaryDrawer/>
             </Hidden>
 
