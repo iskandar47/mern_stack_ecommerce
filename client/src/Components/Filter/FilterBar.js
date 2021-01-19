@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Grid, Box, TextField, Hidden, Typography } from '@material-ui/core'
 import SearchIcon from '@material-ui/icons/Search';
-import { useStyles } from '../styles'
+import { useStyles } from './styles'
 import DropDown from './DropDown';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';

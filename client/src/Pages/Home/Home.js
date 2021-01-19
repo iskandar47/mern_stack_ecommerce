@@ -80,7 +80,7 @@ function Home() {
                 </Grid>
 
 
-                <Hidden mdDown>
+                <Hidden smDown>
                     <Grid container className={(classes.section)} >
                         <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                             <Box className={classes.sectionTypo}>

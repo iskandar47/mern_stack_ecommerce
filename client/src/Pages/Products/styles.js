@@ -1,19 +1,15 @@
 import { makeStyles } from "@material-ui/core"
 
 export const useStyles = makeStyles((theme)=> ({
-    root: {
+    /* root: {
         margin : "auto",
         borderRadius : 0,
         maxWidth: "100%",
         "& .MuiCardContent-root" : {
             padding : "8px 16px"
         },
-        /* "& .MuiCardActions-root" : {
-          display : "flex",
-          justifyContent : "space-between"
-        } */
-      },
-      image : {
+      }, */
+      /* image : {
           display : "flex",
           justifyContent : "center",
           alignItems : "center",
@@ -31,8 +27,8 @@ export const useStyles = makeStyles((theme)=> ({
             borderRadius : "50%",
             margin : "0px 2px"
         }
-      },
-      filterBar : {
+      }, */
+      /* filterBar : {
         marginBottom : "5vh",
         paddingBottom : 24,
         display : "flex",
@@ -62,6 +58,5 @@ export const useStyles = makeStyles((theme)=> ({
           flexDirection : "row",
           alignItems : "center"
         },
-        
-      }
+      } */
 }))

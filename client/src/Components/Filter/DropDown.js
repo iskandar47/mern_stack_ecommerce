@@ -1,37 +1,9 @@
 import React, { useState } from 'react'
-import { Box, Typography, makeStyles, Divider } from '@material-ui/core'
+import { Box, Typography } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import { useStyles } from "./styles"
 
-const useStyles = makeStyles((theme) => ({
-    dropDown : {
-        position : "relative",
-        "& div:first-child" : {
-            cursor : "pointer",
-            position : "relative",
-        },
-    },
-    
-    drop : {
-        position : "absolute",
-        top : 20,
-        backgroundColor : "#fafafa",
-        borderTop : "none",
-        borderRadius : 2,
-        borderBottom : "5px solid #ff9a00",
-        "& ul" : {
-            listStyle : "none",
-            padding : "8px 16px 0px 8px",
-            "& li" : {
-                paddingTop : 4,
-                cursor : "pointer",
-            "& :hover" : {
-                color : "#ff9a00"
-            }
-            }
-        }
-    }
-}))
 
 function DropDown({listItems, listName}) {
     const classes = useStyles()

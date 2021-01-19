@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core"
 
 export const useStyles = makeStyles((theme)=> ({
     container : {
-        padding : "5vh 0vh",
+        padding : "10vh 0vh",
         /* backgroundColor : "rgba(256, 256, 256, 0.7)" */
     },
     /* shapes : {

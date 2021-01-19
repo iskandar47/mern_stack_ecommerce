@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Grid, Box } from '@material-ui/core'
-import ProductCard from "./ProductCard"
-import FilterBar from "./Filter/FilterBar"
+import ProductCard from "../../Components/ProductCard/ProductCard"
+import FilterBar from "../../Components/Filter/FilterBar"
 import {useStyles} from "./styles"
 
 function Products() {

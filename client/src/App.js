@@ -8,7 +8,6 @@ import { Context } from "./Context/contextSettings"
 import Pages from './Pages/Pages'
 
 
-
 function App() {
     
     const {dirSettings : {dir}} = useContext(Context)

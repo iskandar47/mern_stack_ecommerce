@@ -1,12 +1,12 @@
 import React from 'react'
 import { Box, makeStyles } from '@material-ui/core'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
-import Home from '../Components/Home/Home'
-import Products from '../Components/Products/Products'
+import Home from './Home/Home'
+import Products from './Products/Products'
 import Header from '../Components/common/Header/Header'
 import Footer from '../Components/common/Footer/Footer'
-import Login from "../Components/Auth/Login"
-import Register from "../Components/Auth/Register"
+import Login from "./Auth/Login"
+import Register from "./Auth/Register"
 import AdsBar from '../Components/common/Header/AdsBar'
 
 const useStyles = makeStyles((theme) => ({
