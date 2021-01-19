@@ -83,5 +83,16 @@ export const useStyles = makeStyles((theme) => ({
             borderTop : "2px solid #CCC"
         }
     },
-    
+    features : {
+        padding : "100px 0px",
+        "& div" : {
+            display : "flex",
+            flexDirection : "column",
+            justifyContent : "center",
+            alignItems : "center",
+        },
+        "& .MuiSvgIcon-root" : {
+            fontSize : 120,
+        }
+    }
 }));

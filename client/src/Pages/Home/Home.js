@@ -5,6 +5,9 @@ import Banner from "../../assets/pngkey.com-off-white-png-8316956.png"
 import tshirt from "../../assets/tshirt.png"
 import jeans from "../../assets/pants1.png"
 import bag from "../../assets/bag.png"
+import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount'
+import LocalShippingIcon from '@material-ui/icons/LocalShipping'
+import ReplayIcon from '@material-ui/icons/Replay';
 import clsx from "clsx"
 import {useStyles} from "./styles"
 
@@ -144,6 +147,29 @@ function Home() {
                     </Grid>
                 </Grid>
             </Container>
+            <Grid container className={classes.features} spacing={5}>
+                <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+                    <SupervisorAccountIcon />
+                    <Typography align="center" variant="h2" color="primary">Support</Typography>
+                    <Typography align="center" variant="body1" color="textSecondary">
+                        This is some text do describe this feature 
+                    </Typography>
+                </Grid>
+                <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+                    <LocalShippingIcon />
+                    <Typography align="center" variant="h2" color="primary">Fast</Typography>
+                    <Typography align="center" variant="body1" color="textSecondary">
+                        This is some text do describe this feature 
+                    </Typography>
+                </Grid>
+                <Grid item xs={12} sm={12} md={4} lg={4} xl={4} justify="center">
+                    <ReplayIcon />
+                    <Typography align="center" variant="h2" color="primary">Return</Typography>
+                    <Typography align="center" variant="body1" color="textSecondary">
+                        This is some text do describe this feature 
+                    </Typography>
+                </Grid>
+            </Grid>
         </Container>
         </>
     )
