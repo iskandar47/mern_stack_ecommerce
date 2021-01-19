@@ -7,6 +7,7 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
 function ProductCard({name}) {
     const classes = useStyles()
+    const colors = ["red" , "yellow", "green", "blue", "orange"]
 
     return (
         <Card className={classes.root} elevation={1}>
@@ -23,11 +24,10 @@ function ProductCard({name}) {
                     <Typography variant="body2">Sizes : S M L XL XLL</Typography>
                     <Box pt={1} className={classes.colors}>
                         <Typography variant="body2">Colors :</Typography>
-                        <Box  style={{backgroundColor: "red"}}></Box>
-                        <Box  style={{backgroundColor: "blue"}}></Box>
-                        <Box  style={{backgroundColor: "green"}}></Box>
-                        <Box  style={{backgroundColor: "yellow"}}></Box>
-                        <Box  style={{backgroundColor: "orange"}}></Box>
+                        
+                        {colors.map(color => (
+                            <Box key={color} style={{backgroundColor: `${color}`}}></Box>
+                        ))}
                     </Box>
                 </Box>
                 </CardContent>

@@ -8,6 +8,7 @@ import Footer from '../Components/common/Footer/Footer'
 import Login from "./Auth/Login"
 import Register from "./Auth/Register"
 import AdsBar from '../Components/common/Header/AdsBar'
+import Product from "./ProductView/Product"
 
 const useStyles = makeStyles((theme) => ({
     
@@ -26,6 +27,7 @@ function Pages() {
                     <Route path="/products"><Products /></Route>
                     <Route path="/login"><Login /></Route>
                     <Route path="/register"><Register /></Route>
+                    <Route path="/product"><Product /></Route>
                 </Switch>
                 <Footer />
             </Router>
