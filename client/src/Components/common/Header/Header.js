@@ -48,8 +48,6 @@ export default function Header() {
   const {t} = useTranslation()
   const {dirSettings : { language, switchLang}} = useContext(Context)
   
-  console.log(history.location.pathname)
-  
 
   return (
     <div className={classes.root}>

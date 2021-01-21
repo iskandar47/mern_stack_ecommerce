@@ -84,7 +84,7 @@ export const useStyles = makeStyles((theme) => ({
         }
     },
     features : {
-        padding : "100px 0px",
+        padding : "100px 0px 50px 0px",
         "& div" : {
             display : "flex",
             flexDirection : "column",
@@ -92,7 +92,10 @@ export const useStyles = makeStyles((theme) => ({
             alignItems : "center",
         },
         "& .MuiSvgIcon-root" : {
-            fontSize : 120,
+            fontSize : 100,
+        },
+        "& h2" : {
+            fontSize : 35
         }
     }
 }));

@@ -8,7 +8,7 @@ export const useStyles = makeStyles((theme)=> ({
     colors : {
         display : "flex",
         flexDirection : "column",
-        justifyContent : "center"
+        justifyContent : "flex-start"
     },
     colorBox : {
         width : 50,
@@ -17,11 +17,37 @@ export const useStyles = makeStyles((theme)=> ({
     },
     orderForm : {
         "& .MuiFormControl-root" : {
-            margin : "4px 0px"
+            margin : "4px 0px",
+            /* padding : "0px 4px" */
         },
         "& button" : {
-            marginTop : 4,
-            height : 45
+            marginTop : "4px",
+            height : 45,
         }
-    }
+    },
+    props : {
+        "& div" : {
+            display : "flex",
+            flexDirection : "row",
+            alignItems : "center",
+            /* height : "30px", */
+            "& div" : {
+                marginLeft : "12px"
+            }
+        }
+    },
+    addMin : {
+        "& svg" : {
+            fontSize : 16,
+            margin : "0px 4px"
+        }
+    },
+    formControl: {
+        /* margin: theme.spacing(1),
+        minWidth: 120, */
+        "& .MuiSelect-outlined" : {
+            paddingTop : 4,
+            paddingBottom : 4
+        }
+      },
 }))
