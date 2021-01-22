@@ -43,11 +43,28 @@ export const useStyles = makeStyles((theme)=> ({
         }
     },
     formControl: {
-        /* margin: theme.spacing(1),
-        minWidth: 120, */
-        "& .MuiSelect-outlined" : {
-            paddingTop : 4,
-            paddingBottom : 4
-        }
+        margin: theme.spacing(1),
+        minWidth: 120,
+        "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline" : {
+            border : "none"
+        },
       },
+      selectEmpty: {
+        marginTop: theme.spacing(2),
+      },
+      total : {
+          marginBottom : 6,
+          "& .MuiGrid-root" : {
+              marginLeft : "0px!important",
+              width : "50%"
+          }
+      },
+      colorsDrop : {
+          marginBottom : 6,
+          marginLeft : "0px!important",
+          "& .MuiBox-root" : {
+              marginLeft : 0,
+              paddingLeft : 0
+          }
+      }
 }))

@@ -18,11 +18,11 @@ function FilterBar() {
         <Hidden smDown>
             <Container maxWidth="xl">
                 <Grid className={classes.filterBar}>
-                    <DropDown listName="Men" listItems={men} />
-                    <DropDown listName="Women" listItems={women} />
-                    <DropDown listName="Kids" listItems={kids} />
-                    <DropDown listName="Cosmetics" listItems={cosmetics} />
-                    <DropDown listName="Accessories" listItems={accessories} />
+                    <DropDown variant="h6" listName="Men" listItems={men} />
+                    <DropDown variant="h6" listName="Women" listItems={women} />
+                    <DropDown variant="h6" listName="Kids" listItems={kids} />
+                    <DropDown variant="h6" listName="Cosmetics" listItems={cosmetics} />
+                    <DropDown variant="h6" listName="Accessories" listItems={accessories} />
                     <Box mr={1}>
                         <TextField  id="standard-search" label={<SearchIcon color="secondary" />} type="search" />
                     </Box>

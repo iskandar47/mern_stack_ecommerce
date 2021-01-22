@@ -41,7 +41,7 @@ function OrderForm() {
                 label={<Typography variant="body2">Address</Typography>} variant="outlined" 
                 />
             </Grid>
-            <Button  color="secondary" variant="contained">Confirm</Button>
+            <Button fullWidth color="secondary" variant="contained">Confirm</Button>
         </Grid>
     )
 }

@@ -5,14 +5,14 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import { useStyles } from "./styles"
 
 
-function DropDown({listItems, listName}) {
+function DropDown({listItems, listName, variant}) {
     const classes = useStyles()
     const [drop, setDrop] = useState(false)
 
     return (
         <Box className={classes.dropDown}  onMouseLeave={()=> setDrop(false)}  onMouseOver={()=> setDrop(true)} >
             <Box pl={1}>
-                <Typography variant="h6" color={!drop ? "secondary" : "primary"}>{listName}</Typography>
+                <Typography variant={variant} color={!drop ? "secondary" : "primary"}>{listName}</Typography>
                 {
                     !drop ?
                     <ExpandMoreIcon color="secondary" /> :

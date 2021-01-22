@@ -47,6 +47,7 @@ export const useStyles = makeStyles((theme)=> ({
         borderTop : "none",
         borderRadius : 2,
         borderBottom : "5px solid #ff9a00",
+        zIndex : 100,
         "& ul" : {
             listStyle : "none",
             padding : "8px 16px 0px 8px",
