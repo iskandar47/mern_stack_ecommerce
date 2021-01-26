@@ -1,10 +1,11 @@
-
 import React from 'react';
 import { SwipeableDrawer, Box, Typography, Divider } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import CloseIcon from '@material-ui/icons/Close';
+import AddIcon from '@material-ui/icons/Add'
+import RemoveIcon from '@material-ui/icons/Remove';
 import { useStyles } from "./style"
 import tshirt from "../../assets/tshirt.png"
 
@@ -51,19 +52,29 @@ export default function Cart () {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-        <Box p={2} onClick={toggleDrawer(anchor, false)}><CloseIcon/></Box>
+        <Box p={2} onClick={toggleDrawer(anchor, false)}>
+          <CloseIcon/>
+          <Typography variant="h3" align="center">Your cart</Typography>
+        </Box>
         <List>
             {
             products.map((item, i) => (
                 <Box p={2} className={classes.cartProduct} key={i}>
                     <Box>
                         <img width="50px" alt={item.name} src={item.image} />
-                        <Typography align="center" variant="h5">{item.name}</Typography>
                     </Box>
                     <Box>
+                        <Typography variant="h5">{item.name}</Typography>
                         <Typography variant="body2" color="textPrimary">Size : {item.size}</Typography>
                         <Typography variant="body2" color="textPrimary">Color : {item.color}</Typography>
-                        <Typography variant="body2" color="textPrimary">Price : </Typography> 
+                    </Box>
+                    <Box>
+                        <Box className={classes.addMin}>
+                          <Typography variant="body2" color="textPrimary">Units :</Typography>
+                          <AddIcon color="primary"  fontSize="small"/>
+                          <Typography variant="subtitle2"> 1 </Typography>
+                          <RemoveIcon color="primary" fontSize="small"/>
+                        </Box>
                         <Typography variant="h5" color="primary">{item.price}</Typography>
                     </Box>
                 </Box>

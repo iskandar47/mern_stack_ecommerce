@@ -15,10 +15,12 @@ export const useStyles = makeStyles((theme) => ({
     cartProduct : {
         display : "flex",
         flexDirection : "row",
-        justifyContent : "space-between",
+        "& img" : {
+            marginRight : 20
+        },
         "& div:last-child" : {
-            width : "30%",
-            borderBottom : "1px solid #CCC"
+            marginLeft : "auto",
+            
         }
     },
     cartIcon: {
@@ -37,5 +39,11 @@ export const useStyles = makeStyles((theme) => ({
         backgroundColor : "red",
         color : "#fff",
         borderRadius : "50%"
+    },
+    addMin : {
+        display : "flex",
+        flexDirection : "row",
+        alignItems :"center",
+        marginBottom : 12
     }
 }))

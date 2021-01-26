@@ -3,10 +3,11 @@ import { useStyles } from "./styles"
 import { Card, Box, Typography, CardContent, CardActions, Button } from '@material-ui/core'
 import tshirt from "../../assets/tshirt.png"
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import { useHistory } from "react-router-dom"
 
-function ProductCard({name}) {
+function ProductCard( {name} ) {
     const classes = useStyles()
+    const history = useHistory()
     const colors = ["red" , "yellow", "green", "blue", "orange"]
 
     return (
@@ -33,8 +34,8 @@ function ProductCard({name}) {
                 </CardContent>
 
             <CardActions>
-                <Button size="small" color="secondary" variant="contained">
-                Order
+                <Button size="small" color="secondary" variant="contained" onClick={()=> history.push('/product')}>
+                    Order
                 </Button>
                 <Button size="small" color="primary" variant="outlined" endIcon={<AddShoppingCartIcon fontSize="small" />}>
                     add to cart
