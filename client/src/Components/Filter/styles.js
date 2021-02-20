@@ -10,11 +10,19 @@ export const useStyles = makeStyles((theme)=> ({
     "& .MuiInputBase-root" : {
       height : "40px",
       borderColor : "red"
-    }
+    },
+    '& .MuiOutlinedInput-root': {  
+      '& fieldset': {            
+          border: 'none',   
+      },
+      '&:hover fieldset': {
+        border: 'none', 
+      },
+  },
   },
   wrapper : {
     position : "relative",
-    /* border : "1px solid #333", */
+    borderBottom : "1px solid #ccc",
     "& ul": {
       margin : 0,
     },
@@ -29,8 +37,9 @@ export const useStyles = makeStyles((theme)=> ({
     marginTop : 0,
     padding : "10px 20px",
     position : "absolute",
-    borderRadius : 4,
-    backgroundColor : "rgba(0,0,0, 0.8)",
+    /* borderRadius : 4, */
+    backgroundColor : "#fff",
+    border : "1px solid #CCC",
     width : "100%",
     left : 0,
     animation : `$effect 500ms ease-in-out`,
@@ -40,7 +49,7 @@ export const useStyles = makeStyles((theme)=> ({
       listStyle : "none",
       "& li" : {
         fontSize : 16,
-        color: "#fff",
+        color: "#333",
         height : 30
       }
     }

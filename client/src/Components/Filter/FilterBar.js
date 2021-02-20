@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { Container, Grid, Box, TextField, Hidden, Typography, Button } from '@material-ui/core'
+import { Container, Grid, Box, TextField, Hidden, Typography, Button, OutlinedInput } from '@material-ui/core'
 import SearchIcon from '@material-ui/icons/Search';
 import { useStyles } from './styles'
 import DropDown from './DropDown';
@@ -10,10 +10,10 @@ import bag from "../../assets/bag.png"
 function FilterBar() {
     const classes = useStyles()
     const ref = useRef(null)
-    const [open, setOpen] = useState(true)
+    const [open, setOpen] = useState(false)
     const [category, setCategory] = useState([])
 
-    const men = ["tshirt", "sweatshirt", "jackets", "shoes", "jeans" ]
+    const men = ["tshirt", "sweatshirt", "jackets", "shoes", "jeans"]
     const women = ["robe", "sweatshirt", "mantaux", "shoes", "jeans" ]
     const kids = ["boy", "babe", "jackets", "klak", "short" ]
     const cosmetics = ["parfume", "deodorant", "makeup", "shampo" ]
