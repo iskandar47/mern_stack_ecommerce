@@ -1,9 +1,9 @@
 import React from 'react'
-import { useStyles } from "./styles"
 import { Card, Box, Typography, CardContent, CardActions, Button } from '@material-ui/core'
+import { useHistory } from "react-router-dom"
+import { useStyles } from "./styles"
 import tshirt from "../../assets/tshirt.png"
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
-import { useHistory } from "react-router-dom"
 
 function ProductCard( {name} ) {
     const classes = useStyles()
@@ -12,11 +12,11 @@ function ProductCard( {name} ) {
 
     return (
         <Card className={classes.root} elevation={1}>
-                <Box className={classes.image}>
-                    <img src={tshirt} alt="tshirt" />
-                </Box>
+            <Box className={classes.image}>
+                <img src={tshirt} alt="tshirt" />
+            </Box>
+            <CardContent>
 
-                <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
                     {name}
                 </Typography>
@@ -31,13 +31,13 @@ function ProductCard( {name} ) {
                         ))}
                     </Box>
                 </Box>
-                </CardContent>
-
+                
+            </CardContent>
             <CardActions>
                 <Button size="small" color="secondary" variant="contained" onClick={()=> history.push('/product')}>
-                    Order
+                    Details
                 </Button>
-                <Button size="small" color="primary" variant="outlined" endIcon={<AddShoppingCartIcon fontSize="small" />}>
+                <Button size="small" color="primary" variant="outlined" /* endIcon={<AddShoppingCartIcon fontSize="small" />} */>
                     add to cart
                 </Button>
             </CardActions>

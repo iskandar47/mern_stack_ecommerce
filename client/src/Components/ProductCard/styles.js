@@ -8,6 +8,11 @@ export const useStyles = makeStyles((theme)=> ({
         "& .MuiCardContent-root" : {
             padding : "8px 16px"
         },
+        "& .MuiButton-label" : {
+            [theme.breakpoints.down("lg")]: {
+                fontSize : 12
+            }
+        }
     },
     image : {
         display : "flex",

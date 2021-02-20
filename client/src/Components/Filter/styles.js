@@ -1,63 +1,65 @@
 import { makeStyles } from "@material-ui/core"
 
 export const useStyles = makeStyles((theme)=> ({
-    filterBar : {
-        marginBottom : "5vh",
-        paddingBottom : 24,
-        display : "flex",
-        flexDirection : "row",
-        justifyContent : "space-between",
-        alignItems : "flex-end",
-        backgroundColor : "#FAFAFA",
-        borderBottom : "4px solid #ff9a00",
-        borderRadius : 4,
-        "& .MuiBox-root" : {
-          display : "flex",
-          flexDirection : "row",
-          alignItems : "center"
-        },
-        "& .MuiInputBase-input" : {
-          paddingBottom : 0
-        }
-      },
-      mobileFilterBar : {
-        display : "flex",
-        alignItems : "flex-end",
-        paddingBottom : 16,
-        marginBottom : 16,
-        backgroundColor : "#fafafa", 
-        "& div:first-child" : {
-          display : "flex",
-          flexDirection : "row",
-          alignItems : "center"
-        },
-      },
-      dropDown : {
-        position : "relative",
-        "& div:first-child" : {
-            cursor : "pointer",
-            position : "relative",
-        },
-    },
-    
-    drop : {
-        position : "absolute",
-        top : 20,
-        backgroundColor : "#fafafa",
-        borderTop : "none",
-        borderRadius : 2,
-        borderBottom : "5px solid #ff9a00",
-        zIndex : 100,
-        "& ul" : {
-            listStyle : "none",
-            padding : "8px 16px 0px 8px",
-            "& li" : {
-                paddingTop : 4,
-                cursor : "pointer",
-            "& :hover" : {
-                color : "#ff9a00"
-            }
-            }
-        }
+  FilterBar : {
+    width : "100%",
+    listStyle : "none",
+    display : "inline-flex",
+    justifyContent : "space-between",
+    padding : "0px",
+    "& .MuiInputBase-root" : {
+      height : "40px",
+      borderColor : "red"
     }
+  },
+  wrapper : {
+    position : "relative",
+    /* border : "1px solid #333", */
+    "& ul": {
+      margin : 0,
+    },
+    "& li" : {
+      height : "40px",
+      display : "flex",
+      alignItems : "center",
+      cursor : "pointer"
+    }
+  },
+  drop : {
+    marginTop : 0,
+    padding : "10px 20px",
+    position : "absolute",
+    borderRadius : 4,
+    backgroundColor : "rgba(0,0,0, 0.8)",
+    width : "100%",
+    left : 0,
+    animation : `$effect 500ms ease-in-out`,
+    zIndex : 100,
+    "& ul" : {
+      paddingLeft : 0,
+      listStyle : "none",
+      "& li" : {
+        fontSize : 16,
+        color: "#fff",
+        height : 30
+      }
+    }
+  },
+  "@keyframes effect" : {
+    "0%" : {
+      opacity : 0,
+    },
+    "100%" : {
+      opacity : 1,
+    }
+  },
+  dropDownProduct : {
+    display : "flex",
+    flexDirection : "column",
+    justifyContent : "space-around",
+    "& div" : {
+      display : "flex",
+      alignItems : "center",
+    }
+  }
 }))

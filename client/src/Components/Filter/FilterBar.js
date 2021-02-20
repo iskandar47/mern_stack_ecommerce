@@ -1,54 +1,85 @@
-import React from 'react'
-import { Container, Grid, Box, TextField, Hidden, Typography } from '@material-ui/core'
+import React, { useState, useRef } from 'react'
+import { Container, Grid, Box, TextField, Hidden, Typography, Button } from '@material-ui/core'
 import SearchIcon from '@material-ui/icons/Search';
 import { useStyles } from './styles'
 import DropDown from './DropDown';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import bag from "../../assets/bag.png"
 
 function FilterBar() {
     const classes = useStyles()
+    const ref = useRef(null)
+    const [open, setOpen] = useState(true)
+    const [category, setCategory] = useState([])
+
     const men = ["tshirt", "sweatshirt", "jackets", "shoes", "jeans" ]
-    const women = ["tshirt", "sweatshirt", "jackets", "shoes", "jeans" ]
-    const kids = ["tshirt", "sweatshirt", "jackets", "shoes", "jeans" ]
-    const cosmetics = ["tshirt", "sweatshirt", "jackets", "shoes", "jeans" ]
-    const accessories = ["tshirt", "sweatshirt", "jackets", "shoes", "jeans" ]
+    const women = ["robe", "sweatshirt", "mantaux", "shoes", "jeans" ]
+    const kids = ["boy", "babe", "jackets", "klak", "short" ]
+    const cosmetics = ["parfume", "deodorant", "makeup", "shampo" ]
+    const accessories = ["bags", "headphones", "glooves", "hats", "watch" ]
+
+    const openDrop = (obj) => {
+        setCategory(obj)
+        setOpen(true)
+    }
     return (
-        <>
-        <Hidden smDown>
-            <Container maxWidth="xl">
-                <Grid className={classes.filterBar}>
-                    <DropDown variant="h6" listName="Men" listItems={men} />
-                    <DropDown variant="h6" listName="Women" listItems={women} />
-                    <DropDown variant="h6" listName="Kids" listItems={kids} />
-                    <DropDown variant="h6" listName="Cosmetics" listItems={cosmetics} />
-                    <DropDown variant="h6" listName="Accessories" listItems={accessories} />
-                    <Box mr={1}>
-                        <TextField  id="standard-search" label={<SearchIcon color="secondary" />} type="search" />
-                    </Box>
+       <Container maxWidth="xl" style={{margin : "50px auto"}}>
+           <Box className={classes.wrapper}>
+            <ul className={classes.FilterBar}>
+                <li onMouseOver={()=> openDrop(men)} onMouseOut={()=> setOpen(false)}>
+                    <Typography variant="h6">Men</Typography>
+                    <ExpandMoreIcon/>
+                </li>
+                <li onMouseOver={()=> openDrop(women)} onMouseOut={()=> setOpen(false)}>
+                    <Typography variant="h6">Women</Typography>
+                    <ExpandMoreIcon/>
+                </li>
+                <li onMouseOver={()=> openDrop(kids)} onMouseOut={()=> setOpen(false)}>
+                    <Typography variant="h6">Kids</Typography>
+                    <ExpandMoreIcon/>
+                </li>
+                <li onMouseOver={()=> openDrop(cosmetics)} onMouseOut={()=> setOpen(false)}>
+                    <Typography variant="h6">Cosmetics</Typography>
+                    <ExpandMoreIcon/>
+                </li>
+                <li onMouseOver={()=> openDrop(accessories)} onMouseOut={()=> setOpen(false)}>
+                    <Typography variant="h6">Accessories</Typography>
+                    <ExpandMoreIcon/>
+                </li>
+                <TextField id="filled-basic" label={<SearchIcon color="secondary" />} variant="outlined" size="small" />
+            </ul>
+            
+            <Grid 
+            container 
+            style={{display : open ? "flex" : "none"}}
+            className={classes.drop}
+            onMouseLeave={()=> setOpen(false)}
+            onMouseOver={()=> setOpen(true)}
+            >
+                <Grid item lg={4} xl={4} md={4}>
+                    <Typography variant="h6" color="primary">Category</Typography>
+                    <ul>
+                        {category ? category.map(item=> <li key={item}>{item}</li>) : null}
+                    </ul>
                 </Grid>
-            </Container>
-        </Hidden>
-        <Hidden mdUp>
-            <Grid container className={classes.mobileFilterBar}>
-                <Grid item xs={8} sm={8} md={8}>
-                    <Typography variant="h6" color="primary">Categories</Typography>
-                    <ExpandMoreIcon />
+                <Grid item lg={4} xl={4} md={4}>
+                <Typography variant="h6" color="primary">Brands</Typography>
+                <ul>
+                    {category ? category.map(item=> <li key={item}>{item}</li>): null}
+                </ul>
                 </Grid>
-                <Grid item xs={4} sm={4} md={8}>
-                    <Box mr={1}>
-                        <TextField 
-                        InputProps={{disableUnderline : true}}
-                        fullWidth={false} 
-                        id="standard-search" 
-                        label={<SearchIcon color="secondary" />} 
-                        type="search" 
-                        />
+                <Grid item lg={4} xl={4} md={4} className={classes.dropDownProduct}>
+                    <Box>
+                        <img width="100px" src={bag} />
+                        <Box p={2}></Box>
+                        <Typography variant="body2" color="primary">This is some description about this product</Typography>
                     </Box>
+                    <Button color="primary" variant="contained">Details</Button>
                 </Grid>
             </Grid>
-        </Hidden>
-        </>
+           </Box>
+       </Container>
     )
 }
 

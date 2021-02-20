@@ -10,25 +10,7 @@ function DropDown({listItems, listName, variant}) {
     const [drop, setDrop] = useState(false)
 
     return (
-        <Box className={classes.dropDown}  onMouseLeave={()=> setDrop(false)}  onMouseOver={()=> setDrop(true)} >
-            <Box pl={1}>
-                <Typography variant={variant} color={!drop ? "secondary" : "primary"}>{listName}</Typography>
-                {
-                    !drop ?
-                    <ExpandMoreIcon color="secondary" /> :
-                    <ExpandLessIcon color="primary" />
-                }
-            </Box>
-            {
-                !drop ?
-                null :
-                <Box className={classes.drop}>
-                    <ul>
-                        {listItems.map((item, i)=><li key={i}><Typography color="secondary" variant="subtitle2">{item}</Typography></li>)}
-                    </ul>
-                </Box>
-            }
-        </Box>
+        <h5>somthing</h5>
     )
 }
 

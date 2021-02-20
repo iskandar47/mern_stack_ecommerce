@@ -162,7 +162,7 @@ function Home() {
                         This is some text do describe this feature 
                     </Typography>
                 </Grid>
-                <Grid item xs={12} sm={12} md={4} lg={4} xl={4} justify="center">
+                <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
                     <ReplayIcon />
                     <Typography align="center" variant="h2" color="primary">Return</Typography>
                     <Typography align="center" variant="body1" color="textSecondary">
