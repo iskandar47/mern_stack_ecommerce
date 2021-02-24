@@ -34,10 +34,10 @@ function ProductCard( {name} ) {
                 
             </CardContent>
             <CardActions>
-                <Button size="small" color="secondary" variant="contained" onClick={()=> history.push('/product')}>
+                {/* <Button size="small" color="secondary" variant="contained" onClick={()=> history.push('/product')}>
                     Details
-                </Button>
-                <Button size="small" color="primary" variant="outlined" /* endIcon={<AddShoppingCartIcon fontSize="small" />} */>
+                </Button> */}
+                <Button fullWidth size="small" color="primary" variant="outlined" endIcon={<AddShoppingCartIcon fontSize="small" />}>
                     add to cart
                 </Button>
             </CardActions>

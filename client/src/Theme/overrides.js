@@ -9,7 +9,7 @@ export default {
     contained : {
       /* background : "linear-gradient(142deg, rgba(100,161,255,1) 0%, rgba(136,252,254,1) 100%)", */
       /* background : "linear-gradient(142deg, rgba(0, 0, 119, 1) 0%, rgba(136,252,254,1) 100%)", */
-      background: "linear-gradient(142deg, rgba(255,154,0,1) 0%, rgba(255,77,0,1) 100%)"
+      background: "linear-gradient(142deg, rgba(255,154,0,1) 0%, rgba(255,77,0,1) 100%)",
     },
     
   },  

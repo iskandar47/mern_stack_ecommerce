@@ -3,8 +3,9 @@ import { makeStyles } from "@material-ui/core"
 export const useStyles = makeStyles((theme)=> ({
     root: {
         margin : "auto",
-        borderRadius : 0,
+        /* borderRadius : 0, */
         maxWidth: "100%",
+        paddingBottom : 8,
         "& .MuiCardContent-root" : {
             padding : "8px 16px"
         },
@@ -12,6 +13,12 @@ export const useStyles = makeStyles((theme)=> ({
             [theme.breakpoints.down("lg")]: {
                 fontSize : 12
             }
+        },
+        "& .MuiCardActions-root" : {
+            /* padding : "8px 0px", */
+            /* "& .MuiButtonBase-root" : {
+                borderRadius : 0
+            } */
         }
     },
     image : {

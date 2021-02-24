@@ -1,6 +1,9 @@
 import { makeStyles } from "@material-ui/core"
 
 export const useStyles = makeStyles((theme)=> ({
+  container : {
+    marginBottom : 80
+  },
   FilterBar : {
     width : "100%",
     listStyle : "none",
@@ -41,6 +44,7 @@ export const useStyles = makeStyles((theme)=> ({
     border : "1px solid #CCC",
     width : "100%",
     left : 0,
+    borderRadius : "0px 0px 6px 6px",
     animation : `$effect 500ms ease-in-out`,
     zIndex : 100,
     "& h6" : {

@@ -25,7 +25,7 @@ function FilterBar() {
         setOpen(true)
     }
     return (
-       <Container maxWidth="xl" style={{margin : "50px auto"}}>
+       <Container maxWidth="xl" className={classes.container}>
            <Box className={classes.wrapper}>
             <ul className={classes.FilterBar}>
                 <li onMouseOver={()=> openDrop(men)} onMouseOut={()=> setOpen(false)}>
