@@ -13,13 +13,14 @@ function FilterBar() {
     const [open, setOpen] = useState(false)
     const [category, setCategory] = useState([])
 
-    const men = ["tshirt", "sweatshirt", "jackets", "shoes", "jeans"]
-    const women = ["robe", "sweatshirt", "mantaux", "shoes", "jeans" ]
+    const men = ["jeans", "tshirt", "sweatshirt", "jackets", "shoes"]
+    const women = ["robe", "sweatshirt", "mantaux", "shoes", "jeans", "robe", "sweatshirt", "mantaux", "shoes", "jeans"  ]
     const kids = ["boy", "babe", "jackets", "klak", "short" ]
     const cosmetics = ["parfume", "deodorant", "makeup", "shampo" ]
     const accessories = ["bags", "headphones", "glooves", "hats", "watch" ]
 
     const openDrop = (obj) => {
+        setCategory([])
         setCategory(obj)
         setOpen(true)
     }
@@ -60,13 +61,13 @@ function FilterBar() {
                 <Grid item lg={4} xl={4} md={4}>
                     <Typography variant="h6" color="primary">Category</Typography>
                     <ul>
-                        {category ? category.map(item=> <li key={item}>{item}</li>) : null}
+                        {category ? category.map((item, i)=> <li key={i}>{item}</li>) : null}
                     </ul>
                 </Grid>
                 <Grid item lg={4} xl={4} md={4}>
                 <Typography variant="h6" color="primary">Brands</Typography>
                 <ul>
-                    {category ? category.map(item=> <li key={item}>{item}</li>): null}
+                    {category ? category.map((item, i)=> <li key={i}>{item}</li>): null}
                 </ul>
                 </Grid>
                 <Grid item lg={4} xl={4} md={4} className={classes.dropDownProduct}>
@@ -75,7 +76,7 @@ function FilterBar() {
                         <Box p={2}></Box>
                         <Typography variant="body2" color="primary">This is some description about this product</Typography>
                     </Box>
-                    <Button color="primary" variant="contained">Details</Button>
+                    <Button color="secondary" variant="contained">Details</Button>
                 </Grid>
             </Grid>
            </Box>
