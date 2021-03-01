@@ -5,10 +5,16 @@ export const useStyles = makeStyles((theme)=> ({
         marginTop : "15vh",
        /*  border : "3px solid #EFEFEF" */
     },
+    /* productInfo : {
+        marginBottom : 24
+    }, */
     colors : {
         display : "flex",
-        flexDirection : "column",
-        justifyContent : "flex-start"
+        flexDirection : "row",
+        justifyContent : "flex-start",
+        "& .MuiBox-root" : {
+            marginRight : 16
+        }
     },
     colorBox : {
         width : 50,
@@ -42,12 +48,13 @@ export const useStyles = makeStyles((theme)=> ({
             margin : "0px 4px"
         }
     },
+
     formControl: {
-        margin: theme.spacing(1),
+        marginTop : 6,
         minWidth: 120,
-        "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline" : {
-            border : "none"
-        },
+        "& .MuiFormLabel-root" : {
+            fontSize : 16
+        }
       },
       selectEmpty: {
         marginTop: theme.spacing(2),
@@ -66,5 +73,11 @@ export const useStyles = makeStyles((theme)=> ({
               marginLeft : 0,
               paddingLeft : 0
           }
+      },
+      btns : {
+          paddingTop : 10,
+        "& button" : {
+            marginRight : 16
+        }
       }
 }))
