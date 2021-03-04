@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core"
 
 export const useStyles = makeStyles((theme)=> ({
   container : {
-    marginBottom : 80
+    marginBottom : 20
   },
   FilterBar : {
     width : "100%",
@@ -84,6 +84,30 @@ export const useStyles = makeStyles((theme)=> ({
     "& div" : {
       display : "flex",
       alignItems : "center",
+    }
+  },
+  mobileBarContainer : {
+    position : "relative",
+    borderRadius : "6px 6px 0px 0px",
+    backgroundColor : "#FF9A00",
+  },
+  categoriesBtn : {
+    height : 40,
+    display : "flex",
+    flexDirection : "row",
+    alignItems : "center",
+    justifyContent : "space-between",
+  },
+  mobileDrop : {
+    /* padding : 16, */
+    position : "absolute", 
+    left : 0, 
+    width:"100%", 
+    backgroundColor : "#fff",
+    border : "1px solid #CCC",
+    borderRadius : "0px 0px 6px 6px",
+    "& li" : {
+      margin : "8px 16px"
     }
   }
 }))

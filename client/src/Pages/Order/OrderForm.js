@@ -1,7 +1,6 @@
 import React from 'react'
-import { Container, Grid, Typography, Box, TextField, Button } from "@material-ui/core"
+import { Grid, Typography, TextField, Button } from "@material-ui/core"
 import { useStyles } from "./Styles"
-import OrderProps  from "../ProductView/OrderProps"
 
 function OrderForm() {
     const classes = useStyles()

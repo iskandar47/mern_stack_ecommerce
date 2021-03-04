@@ -48,7 +48,7 @@ const useStyles = makeStyles({
       >
         
         <List>
-          {['Home', 'Products', 'Categories', 'Login'].map((text, index) => (
+          {['Home', 'Products', 'About', 'Contact', 'Login'].map((text, index) => (
             <ListItem button key={index}>
               <ListItemText primary={<Typography variant="h6">{t(text)}</Typography>} />
             </ListItem>

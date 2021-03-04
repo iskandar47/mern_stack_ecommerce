@@ -65,13 +65,14 @@ export default function Header() {
               <Hidden smDown>
                 <Link to="/">{t("Home")}</Link> 
                 <Link to="/products">{t("Products")}</Link>
-                <Link to="/categories">{t("Categories")}</Link>
+                <Link to="/about">{t("About")}</Link>
+                <Link to="/contact">{t("Contact")}</Link>
               </Hidden>
             </Typography>
             
             <Button className={classes.langBtn} color="secondary" onClick={()=>switchLang(language)}>
               {language === "ar" ? "العربيه": "English"}
-              <LanguageIcon color="secondary" /* fontSize="small" */ style={{margin : "0px 4px"}} />
+              <LanguageIcon color="secondary" style={{margin : "0px 4px"}} />
             </Button>
 
             <Hidden smDown>

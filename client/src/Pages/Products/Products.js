@@ -10,7 +10,7 @@ function Products() {
     return (
         <Container maxWidth={false} style={{paddingTop : "15vh"}}>
             <FilterBar />
-            <Container maxWidth="xl">
+            <Container maxWidth="xl" style={{paddingTop : "10vh"}}>
                 <Grid container spacing={5}>
                     {products.map((name, i) => (
                         <Grid key={i} item xs={12} sm={6} md={4} lg={3} xl={3} >
