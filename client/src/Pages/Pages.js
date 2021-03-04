@@ -9,6 +9,7 @@ import Login from "./Auth/Login"
 import Register from "./Auth/Register"
 import AdsBar from '../Components/common/Header/AdsBar'
 import Product from "./ProductView/Product"
+import Orders from "./Order/Orders"
 
 const useStyles = makeStyles((theme) => ({
     
@@ -28,6 +29,7 @@ function Pages() {
                     <Route path="/login"><Login /></Route>
                     <Route path="/register"><Register /></Route>
                     <Route path="/product"><Product /></Route>
+                    <Route path="/orders"><Orders /></Route>
                 </Switch>
                 <Footer />
             </Router>

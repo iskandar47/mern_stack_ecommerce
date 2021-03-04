@@ -23,7 +23,7 @@ export default {
       },
     },
     root: {
-      backgroundColor : "#FFF",
+      backgroundColor : "#fff",
       '&:focus,&:hover': {
         '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
           color: '#5753A4',

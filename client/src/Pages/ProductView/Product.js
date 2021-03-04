@@ -1,12 +1,14 @@
 import React from "react"
 import { Container, Grid, Typography, Box, Divider, FormControlLabel, Select, MenuItem, Button, Checkbox } from "@material-ui/core"
 import { useStyles } from "./styles"
+import { useHistory } from "react-router-dom"
 import bag from "../../assets/bag.png"
 import Sizes from "./Sizes"
 import Colors from "./Colors"
 
 function Product() {
     const classes = useStyles()
+    const history = useHistory()
 
     return (
         <Container maxWidth={"xl"} className={classes.container}>
@@ -45,7 +47,7 @@ function Product() {
                     </Box>
                     
                     <Box  className={classes.btns}>
-                        <Button variant="contained" color="secondary">order now</Button>
+                        <Button variant="contained" color="secondary" onClick={()=> history.push('/orders')}>order now</Button>
                         <Button variant="outlined" color="primary">add to cart</Button>
                     </Box>
                 </Grid>
